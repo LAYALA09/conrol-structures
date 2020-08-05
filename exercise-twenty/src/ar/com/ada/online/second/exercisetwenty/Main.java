@@ -21,10 +21,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int pantsModel;
+
         String model;
         int size;
-        double price, quantityA, quantityB, finalCost, gain;
+        double price, fabricCostA, fabricCostB, totalCost, gain, productionCostA, productionCostB, sizeCharge, subTotalCost;
 
         Scanner keyboard = new Scanner(System.in);
 
@@ -34,9 +34,6 @@ public class Main {
         System.out.println("Ingrese talle");
         size = keyboard.nextInt();
 
-        System.out.println("Ingrese cantidad de pantalones");
-        pantsModel = keyboard.nextInt();
-
 
         System.out.println("Ingrese precio");
         price = keyboard.nextDouble();
@@ -45,25 +42,36 @@ public class Main {
         if (model.equalsIgnoreCase("A")) {
             switch (size) {
                 case 30:
-                    quantityA = price * 1.8;
-                    finalCost = quantityA * 1.3;
-                    gain = pantsModel * quantityA * 0.3;
-                    System.out.println("El costo final es: " + finalCost);
-                    System.out.println("La ganancia es: " + gain);
+                    fabricCostA = price * 1.5;
+                    productionCostA = price * 0.8;
+                    subTotalCost = fabricCostA + productionCostA;
+                    gain = subTotalCost * 0.3;
+                    totalCost = subTotalCost + gain;
+                    System.out.println("El costo final por cada pantalón es: " + totalCost);
+                    System.out.println("La ganancia por pantalón es: " + gain);
                     break;
                 case 32:
-                    quantityA = (price * 0.8) + (price * 1.04);
-                    finalCost = quantityA * 1.3;
-                    gain = pantsModel * quantityA * 0.3;
-                    System.out.println("El costo final es: " + finalCost);
-                    System.out.println("La ganancia es: " + gain);
+                    fabricCostA = price * 1.5;
+                    productionCostA = price * 0.8;
+                    sizeCharge = productionCostA * 0.04;
+                    subTotalCost = fabricCostA + productionCostA + sizeCharge;
+                    gain = subTotalCost * 0.3;
+                    totalCost = subTotalCost + gain;
+
+                    System.out.println("El costo final por cada pantalón es:" + totalCost);
+                    System.out.println("La ganancia por pantalón es: " + gain);
                     break;
                 case 36:
-                    quantityA = (price * 0.8) + (price * 1.04);
-                    finalCost = quantityA * 1.3;
-                    gain = pantsModel * quantityA * 0.3;
-                    System.out.println("El costo final es: " + finalCost);
-                    System.out.println("La ganancia es: " + gain);
+                    fabricCostA = price * 1.5;
+                    productionCostA = price * 0.8;
+                    sizeCharge = productionCostA * 0.04;
+                    subTotalCost = fabricCostA + productionCostA + sizeCharge;
+                    gain = subTotalCost * 0.3;
+                    totalCost = subTotalCost + gain;
+
+                    System.out.println("El costo final por cada pantalón es: " + totalCost);
+                    System.out.println("La ganancia por pantalón es: " + gain);
+                    break;
 
                 default:
                     System.out.println("El talle no existe");
@@ -73,26 +81,34 @@ public class Main {
         } else {
             switch (size) {
                 case 30:
-                    quantityB = price * 1.95;
-                    finalCost = quantityB * 1.3;
-                    gain = pantsModel * quantityB * 0.3;
-                    System.out.println("El costo final es: " + finalCost);
-                    System.out.println("La ganancia es: " + gain);
+                    fabricCostB = price * 1.8;
+                    productionCostB = price * 0.95;
+                    subTotalCost = fabricCostB + productionCostB;
+                    gain = subTotalCost * 0.3;
+                    totalCost = subTotalCost + gain;
+                    System.out.println("El costo final por cada pantalón es: " + totalCost);
+                    System.out.println("La ganancia por pantalón es: " + gain);
                     break;
                 case 32:
-                    quantityB = (price * 0.95) + (price * 1.04);
-                    finalCost = quantityB * 1.3;
-                    gain = pantsModel * quantityB * 0.3;
-                    System.out.println("El costo final es: " + finalCost);
-                    System.out.println("La ganancia es: " + gain);
+                    fabricCostB = price * 1.8;
+                    productionCostB = price * 0.95;
+                    sizeCharge = productionCostB * 0.04;
+                    subTotalCost = fabricCostB + productionCostB + sizeCharge;
+                    gain = subTotalCost * 0.3;
+                    totalCost = subTotalCost + gain;
+                    System.out.println("El costo final por cada pantalón es:" + totalCost);
+                    System.out.println("La ganancia por pantalón es: " + gain);
                     break;
                 case 36:
-                    quantityB = (price * 0.95) + (price * 1.04);
-                    finalCost = quantityB * 1.3;
-                    gain = pantsModel * quantityB * 0.3;
-                    System.out.println("El costo final es: " + finalCost);
-                    System.out.println("La ganancia es: " + gain);
-
+                    fabricCostB = price * 1.8;
+                    productionCostB = price * 0.95;
+                    sizeCharge = productionCostB * 0.04;
+                    subTotalCost = fabricCostB + productionCostB + sizeCharge;
+                    gain = subTotalCost * 0.3;
+                    totalCost = subTotalCost + gain;
+                    System.out.println("El costo final por cada pantalón es: " + totalCost);
+                    System.out.println("La ganancia por pantalón es: " + gain);
+                    break;
                 default:
                     System.out.println("El talle no existe");
 
