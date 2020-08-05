@@ -1,5 +1,5 @@
 package ar.com.ada.online.second.exercisetwenty;
-//Realice un algoritmo para resolver el siguiente problema: una fábrica de pantalones
+//Realice un proyecto para resolver el siguiente problema: una fábrica de pantalones
 //desea calcular cuál es el precio final de venta y cuánto ganará por los N pantalones que
 //produzca con el corte de alguno de sus modelos, para esto se cuenta con la siguiente
 //información:
@@ -24,7 +24,8 @@ public class Main {
 
         String model;
         int size;
-        double price, fabricCostA, fabricCostB, totalCost, gain, productionCostA, productionCostB, sizeCharge, subTotalCost;
+        double price, fabricCostA, fabricCostB, totalCost, productionCostA, productionCostB, sizeCharge, gain, subTotalCost;
+
 
         Scanner keyboard = new Scanner(System.in);
 
@@ -47,8 +48,13 @@ public class Main {
                     subTotalCost = fabricCostA + productionCostA;
                     gain = subTotalCost * 0.3;
                     totalCost = subTotalCost + gain;
-                    System.out.println("El costo final por cada pantalón es: " + totalCost);
-                    System.out.println("La ganancia por pantalón es: " + gain);
+
+                    System.out.println("El costo final por cada pantalón es: ");
+                    System.out.println(+totalCost);
+
+                    System.out.println("La ganancia por pantalón es: ");
+                    System.out.printf("%.2f", gain);
+
                     break;
                 case 32:
                     fabricCostA = price * 1.5;
@@ -58,8 +64,13 @@ public class Main {
                     gain = subTotalCost * 0.3;
                     totalCost = subTotalCost + gain;
 
-                    System.out.println("El costo final por cada pantalón es:" + totalCost);
-                    System.out.println("La ganancia por pantalón es: " + gain);
+
+                    System.out.println("El costo final por cada pantalón es: ");
+                    System.out.println(+totalCost);
+
+                    System.out.println("La ganancia por pantalón es: ");
+                    System.out.printf("%.2f", gain);
+
                     break;
                 case 36:
                     fabricCostA = price * 1.5;
@@ -69,8 +80,12 @@ public class Main {
                     gain = subTotalCost * 0.3;
                     totalCost = subTotalCost + gain;
 
-                    System.out.println("El costo final por cada pantalón es: " + totalCost);
-                    System.out.println("La ganancia por pantalón es: " + gain);
+                    System.out.println("El costo final por cada pantalón es: ");
+                    System.out.println(+totalCost);
+
+                    System.out.println("La ganancia por pantalón es: ");
+                    System.out.printf("%.2f", gain);
+
                     break;
 
                 default:
@@ -86,8 +101,14 @@ public class Main {
                     subTotalCost = fabricCostB + productionCostB;
                     gain = subTotalCost * 0.3;
                     totalCost = subTotalCost + gain;
-                    System.out.println("El costo final por cada pantalón es: " + totalCost);
-                    System.out.println("La ganancia por pantalón es: " + gain);
+
+                    System.out.println("El costo final por cada pantalón es: ");
+                    System.out.println(+totalCost);
+
+                    System.out.println("La ganancia por pantalón es: ");
+                    System.out.printf("%.2f", gain);
+
+
                     break;
                 case 32:
                     fabricCostB = price * 1.8;
@@ -96,8 +117,13 @@ public class Main {
                     subTotalCost = fabricCostB + productionCostB + sizeCharge;
                     gain = subTotalCost * 0.3;
                     totalCost = subTotalCost + gain;
-                    System.out.println("El costo final por cada pantalón es:" + totalCost);
-                    System.out.println("La ganancia por pantalón es: " + gain);
+
+                    System.out.println("El costo final por cada pantalón es: ");
+                    System.out.println(+totalCost);
+
+                    System.out.println("La ganancia por pantalón es: ");
+                    System.out.printf("%.2f", gain);
+
                     break;
                 case 36:
                     fabricCostB = price * 1.8;
@@ -105,9 +131,15 @@ public class Main {
                     sizeCharge = productionCostB * 0.04;
                     subTotalCost = fabricCostB + productionCostB + sizeCharge;
                     gain = subTotalCost * 0.3;
+
                     totalCost = subTotalCost + gain;
-                    System.out.println("El costo final por cada pantalón es: " + totalCost);
-                    System.out.println("La ganancia por pantalón es: " + gain);
+
+                    System.out.println("El costo final por cada pantalón es: ");
+                    System.out.println(+totalCost);
+
+                    System.out.println("La ganancia por pantalón es: ");
+                    System.out.printf("%.2f", gain);
+
                     break;
                 default:
                     System.out.println("El talle no existe");
