@@ -31,7 +31,9 @@ public class Main {
             }else if(average < 7.5 && average >= 6) {
                 amountSholarShip = 6000;
                 System.out.println("El monto de la beca es: " + amountSholarShip);
-            }System.out.println("Los invitamos a estudiar ");
+            }else{
+                System.out.println("Lo invitamos a estudiar ");
+            }
 
 
                 }else {
@@ -44,7 +46,9 @@ public class Main {
             } else if (average < 8 && average >= 6) {
                 amountSholarShip = 100;
                 System.out.println("El monto de la beca es: " + amountSholarShip);
-            } System.out.println("Los invitamos a estudiar ");
+            }else{
+                System.out.println("Lo invitamos a estudiar ");
+            }
 
 
             }
